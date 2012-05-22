@@ -1,0 +1,24 @@
+<p>
+  <b>Name:</b>
+  <%= @champion.name %>
+</p>
+
+<p>
+  
+  <%= image_tag @champion.image %>
+</p>
+
+<p>
+  <b>Guide url:</b>
+<iframe src= "<%= @champion.guide %>" width="1020" height="1020"/>  
+ 
+</p>
+
+
+
+
+<%= link_to(raw(@champion.guide),{:pics => true},{ :class => 'highlight'})  %>
+
+<object data=@champion.guide width="600" height="400">
+<embed src=@champion.guide width="600" height="400"> 
+</embed> Error: Embedded data could not be displayed. </object>
